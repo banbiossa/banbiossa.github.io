@@ -511,3 +511,19 @@ h2 ~ p {
 .post-content img {
   max-width: 70%;
 }
+
+/* MEDIA QUERY STYLES */
+@media (max-width: 800px) {
+  html {
+    box-shadow: none;
+    padding: 0;
+  }
+  .post-aside {
+    display: none;
+  }
+}
+@@media (max-width: 600px) {
+  .half-hero {
+    display: none;
+  }
+}
