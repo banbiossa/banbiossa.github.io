@@ -1,5 +1,16 @@
   <head>
-    <title>Test Page: Don't Panic</title>
+    {% if page.title %}
+      <title>{{ page.title }} | Test Page</title>
+    {% else %}
+      <title>Test Page: Don't Panic</title>
+    {% endif %}
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}" />
+      <meta property="og:title" content="{{ page.description }}" />
+    {% else %}
+      <meta name="description" content="This is a Dangerous site." />
+      <meta property="og:title" content="This is a Dangerous site." />
+    {% endif %}
     <link href="/favicon.png" rel="icon" />
     <link rel="apple-touch-icon" href="/square-cat.png">
     <meta charset="utf-8">
